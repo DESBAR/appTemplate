@@ -22,9 +22,9 @@ class _BottomNavigationState extends State<BottomNavigation> {
         children: _pages,
       ),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.white,
-        unselectedItemColor: Color(0xFF9397A0),
-        selectedItemColor: Color(0xFF3D616B),
+   backgroundColor:Color(0xFF43AA8B),
+        unselectedItemColor: Colors.black,
+        selectedItemColor: Colors.white,
         currentIndex: _currentIndex,
         showSelectedLabels: true,
       
@@ -34,11 +34,11 @@ class _BottomNavigationState extends State<BottomNavigation> {
             _currentIndex = index;
           });
         },
-        items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Page 1'),
-          BottomNavigationBarItem(icon: Icon(Icons.star), label: 'Page 2'),
-          BottomNavigationBarItem(icon: Icon(Icons.favorite), label: 'Page 3'),
-          BottomNavigationBarItem(icon: Icon(Icons.settings), label: 'Page 4'),
+        items: const[
+          BottomNavigationBarItem(icon: Icon(Icons.wallet), label: 'Wallet'),
+          BottomNavigationBarItem(icon: Icon(Icons.handshake), label: 'Space'),
+          BottomNavigationBarItem(icon: Icon(Icons.shopping_cart), label: 'Shop'),
+          BottomNavigationBarItem(icon: Icon(Icons.settings), label: 'Settings'),
         ],
       ),
     );

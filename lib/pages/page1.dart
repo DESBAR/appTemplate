@@ -1,102 +1,88 @@
-// file: pages/page1.dart
 import 'package:flutter/material.dart';
-import 'package:mobiletemplate/widgets/carousel.dart';
+import 'package:mobiletemplate/widgets/cardInfo.dart';
+import 'package:mobiletemplate/widgets/littleCard.dart';
+import 'package:mobiletemplate/widgets/littleCard1.dart';
 
 class Page1 extends StatelessWidget {
+  const Page1({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Color(0xFFF5F7FA),
-        elevation: 0,
-      ),
-      body: Column(
-        children: [
-          Container(
-            height: 73,
-            width: double.infinity,
-            color: Color(0xFFF5F7FA),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  " Portefeuille",
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 28,
-                    color: Colors.black,
-                  ),
-                ),
-                CircleAvatar(
-                  backgroundColor: Colors.transparent,
-                  child: Icon(
-                    Icons.person,
-                    color: Colors.black,
-                  ),
-                ),
-              ],
+      body: CustomScrollView(
+        slivers: <Widget>[
+         const SliverAppBar(
+            backgroundColor: const Color(0xFF43AA8B),
+            title: Text(
+              'Wallet',
+              style: TextStyle(
+                
+                color: Colors.black, // Couleur du texte en noir
+              ),
             ),
+            centerTitle: false,
+            actions: [
+              CircleAvatar(
+                backgroundColor: Colors.transparent, 
+                child: Icon(
+                  Icons.person,
+                  size: 30,
+                  color: Colors.black,
+                ),
+              ),
+            ],
+  
+            floating: true, // permet à l'AppBar de se rétracter lors du scroll
+            snap: true, // permet à l'AppBar de se rétracter complètement
+            // en fonction de la position de l'utilisateur
           ),
-          Container(
-            height: MediaQuery.of(context).size.height * 0.5,
-            width: double.infinity,
-            child: ListView(
-              scrollDirection: Axis.horizontal,
+          SliverToBoxAdapter(
+            child: Column(
               children: [
-                SingleChildScrollView(
-                  child: Container(
-                    height: 350,
-                    width: 200,
-                    margin: EdgeInsets.all(10),
-                    decoration: BoxDecoration(
-                      color: Colors.black,
-                      borderRadius: BorderRadius.circular(20),
-                    ),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.2,
+                  width: double.infinity,
+                  child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (BuildContext context, int index) => CardInfo(),
+                    itemCount: 2,
                   ),
                 ),
-                SingleChildScrollView(
-                  child: Container(
-                    height: 350,
-                    width: 200,
-                    margin: EdgeInsets.all(10),
-                    decoration: BoxDecoration(
-                      color: Colors.black,
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                  ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: const [
+                    LittleCard(),
+                    LittleCard1(),
+                  ],
                 ),
-                SingleChildScrollView(
-                  child: Container(
-                    height: 350,
-                    width: 200,
-                    margin: EdgeInsets.all(10),
-                    decoration: BoxDecoration(
-                      color: Colors.black,
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                  ),
+                    Padding(padding: EdgeInsets.all(20)),
+              Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: const [
+                    LittleCard(),
+                    LittleCard1(),
+                  ],
                 ),
-                SingleChildScrollView(
-                  child: Container(
-                    height: 350,
-                    width: 200,
-                    margin: EdgeInsets.all(10),
-                    decoration: BoxDecoration(
-                      color: Colors.black,
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                  ),
+                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: const [
+                    LittleCard(),
+                    LittleCard1(),
+                  ],
                 ),
-                SingleChildScrollView(
-                  child: Container(
-                    height: 350,
-                    width: 200,
-                    margin: EdgeInsets.all(10),
-                    decoration: BoxDecoration(
-                      color: Colors.black,
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                  ),
+                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: const [
+                    LittleCard(),
+                    LittleCard1(),
+                  ],
+                ),
+                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: const [
+                    LittleCard(),
+                    LittleCard1(),
+                  ],
                 ),
               ],
             ),
