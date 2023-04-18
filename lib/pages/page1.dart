@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mobiletemplate/widgets/cardInfo.dart';
-import 'package:mobiletemplate/widgets/littleCard.dart';
-import 'package:mobiletemplate/widgets/littleCard1.dart';
+import 'package:mobiletemplate/widgets/stackingCard.dart';
+import 'package:mobiletemplate/widgets/harvestCard.dart';
 
 class Page1 extends StatelessWidget {
   const Page1({Key? key}) : super(key: key);
@@ -9,15 +9,16 @@ class Page1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: CustomScrollView(
+      backgroundColor: const Color(0xFFF4E9E9), // Couleur de fond de la page
+      body: 
+      CustomScrollView(
         slivers: <Widget>[
-         const SliverAppBar(
+          const SliverAppBar(
             backgroundColor: const Color(0xFF43AA8B),
             title: Text(
               'Wallet',
               style: TextStyle(
-                
-                color: Colors.black, // Couleur du texte en noir
+                color: Colors.black,
               ),
             ),
             centerTitle: false,
@@ -31,10 +32,8 @@ class Page1 extends StatelessWidget {
                 ),
               ),
             ],
-  
-            floating: true, // permet à l'AppBar de se rétracter lors du scroll
-            snap: true, // permet à l'AppBar de se rétracter complètement
-            // en fonction de la position de l'utilisateur
+            floating: true,
+            snap: true,
           ),
           SliverToBoxAdapter(
             child: Column(
@@ -51,37 +50,37 @@ class Page1 extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: const [
-                    LittleCard(),
-                    LittleCard1(),
+                    StackingCard(),
+                    Toharvest(),
                   ],
                 ),
-                    Padding(padding: EdgeInsets.all(20)),
-              Row(
+                Padding(padding: EdgeInsets.all(20)),
+                Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: const [
-                    LittleCard(),
-                    LittleCard1(),
+                    StackingCard(),
+                    Toharvest(),
                   ],
                 ),
-                 Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: const [
-                    LittleCard(),
-                    LittleCard1(),
+                    StackingCard(),
+                    Toharvest(),
                   ],
                 ),
-                 Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: const [
-                    LittleCard(),
-                    LittleCard1(),
+                    StackingCard(),
+                    Toharvest(),
                   ],
                 ),
-                 Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: const [
-                    LittleCard(),
-                    LittleCard1(),
+                    StackingCard(),
+                    Toharvest(),
                   ],
                 ),
               ],

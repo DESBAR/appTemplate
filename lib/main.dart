@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mobiletemplate/widgets/splash_screen.dart';
-
+import 'package:rive/rive.dart';
 
 void main() => runApp(MyApp());
 
