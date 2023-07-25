@@ -9,6 +9,7 @@ class Page3 extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xFFF4E9E9), // Couleur de fond de la page
       appBar: AppBar(
+        elevation: 0.0,
         backgroundColor: const Color(0xFF43AA8B),
         title: const Text(
           'Shop',
@@ -17,9 +18,20 @@ class Page3 extends StatelessWidget {
           ),
         ),
         centerTitle: false,
-        actions: const [
-         
-        ],
+        actions: const [],
+      ),
+      body: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/wallpaper.png'),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: ListView(
+          children: [
+// Your content here
+          ],
+        ),
       ),
     );
   }

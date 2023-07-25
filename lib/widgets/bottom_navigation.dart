@@ -5,6 +5,8 @@ import 'package:mobiletemplate/pages/page3.dart';
 import 'package:mobiletemplate/pages/page4.dart';
 
 class BottomNavigation extends StatefulWidget {
+  const BottomNavigation({super.key});
+
   @override
   _BottomNavigationState createState() => _BottomNavigationState();
 }
