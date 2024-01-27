@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mobiletemplate/widgets/cardInfo.dart';
 
 class Page2 extends StatelessWidget {
   const Page2({Key? key}) : super(key: key);

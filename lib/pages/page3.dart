@@ -1,6 +1,6 @@
-import 'package:carousel_slider/carousel_slider.dart';
+
 import 'package:flutter/material.dart';
-import 'package:mobiletemplate/widgets/cardInfo.dart';
+
 import 'package:mobiletemplate/widgets/stackingCard.dart';
 
 class Page3 extends StatelessWidget {
