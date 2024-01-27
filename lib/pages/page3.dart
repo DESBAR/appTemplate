@@ -1,5 +1,7 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:mobiletemplate/widgets/cardInfo.dart';
+import 'package:mobiletemplate/widgets/stackingCard.dart';
 
 class Page3 extends StatelessWidget {
   const Page3({Key? key}) : super(key: key);
@@ -29,6 +31,7 @@ class Page3 extends StatelessWidget {
         ),
         child: ListView(
           children: [
+            StackingCard()
 // Your content here
           ],
         ),
