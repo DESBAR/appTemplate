@@ -1,20 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:mobiletemplate/widgets/bottom_navigation.dart';
+
 
 class WomenOnTopCard extends StatelessWidget {
-  const WomenOnTopCard({Key? key}) : super(key: key);
+  final VoidCallback onTap;
+  const WomenOnTopCard({Key? key, required this.onTap}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => const SousPageWomenOnTop(),
-          ),
-        );
-      },
+      onTap: onTap,
       child: Container(
         width: 160,
         height: 160,
@@ -45,20 +39,23 @@ class WomenOnTopCard extends StatelessWidget {
   }
 }
 
-class SousPageWomenOnTop extends StatelessWidget {
-  const SousPageWomenOnTop({Key? key}) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color(0xFF43AA8B),
-        title: const Text('Women on top '),
-      ),
-      body: const Center(
-        child: Text('Liste de position où la femme est sur l''hommme '),
-      ),
-      bottomNavigationBar: const BottomNavigation(),
-    );
+class PageWomenOnTop extends StatelessWidget {
+  const PageWomenOnTop({Key? key}) : super(key: key);
+
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        
+        appBar: AppBar(
+          backgroundColor: const Color(0xFF43AA8B),
+          title: const Text('Women on top '),
+        ),
+        
+        body: const Center(
+          child: Text('Liste de position ou la femme est sur l' 'hommme '),
+        ),
+      
+      );
+    }
   }
-}

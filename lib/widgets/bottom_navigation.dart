@@ -3,7 +3,19 @@ import 'package:mobiletemplate/pages/page1.dart';
 import 'package:mobiletemplate/pages/page2.dart';
 import 'package:mobiletemplate/pages/page3.dart';
 import 'package:mobiletemplate/pages/page4.dart';
+import 'package:mobiletemplate/widgets/WomenOnTop.dart';
 import 'package:mobiletemplate/widgets/theme.dart';
+
+
+//route
+class MainScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: BottomNavigation(),
+    );
+  }
+}
 
 class BottomNavigation extends StatefulWidget {
   const BottomNavigation({super.key});
@@ -11,16 +23,32 @@ class BottomNavigation extends StatefulWidget {
   @override
   _BottomNavigationState createState() => _BottomNavigationState();
 }
-
 class _BottomNavigationState extends State<BottomNavigation> {
   int _currentIndex = 0;
+  late final List<Widget> _pages;
 
-  final List<Widget> _pages = [
-    const Page1(),
-    const Page2(),
-    const Page3(),
-    const Page4(),
-  ];
+  _BottomNavigationState() {
+    _pages = [
+      const Page1(),
+      const Page2(),
+      const Page3(),
+      const Page4(),
+      WomenOnTopCard(onTap: _onWomenOnTopTapped),
+    ];
+  }
+
+  void _onWomenOnTopTapped() {
+    // Ici, vous pouvez gérer la navigation ou l'action spécifique
+    // pour la page WomenOnTop.
+    // Par exemple, naviguer vers une nouvelle page:
+    // Navigator.of(context).push(MaterialPageRoute(builder: (context) => PageWomenOnTop()));
+  }
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _currentIndex = index;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -36,11 +64,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
         currentIndex: _currentIndex,
         showSelectedLabels: true,
         type: BottomNavigationBarType.fixed,
-        onTap: (index) {
-          setState(() {
-            _currentIndex = index;
-          });
-        },
+        onTap: _onItemTapped,
         items: const [
           BottomNavigationBarItem(
               icon: Icon(Icons.male_outlined), label: 'Positions'),

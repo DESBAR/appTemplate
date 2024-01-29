@@ -3,9 +3,15 @@ import 'package:mobiletemplate/widgets/cardInfo.dart';
 import 'package:mobiletemplate/widgets/WomenOnTop.dart';
 import 'package:mobiletemplate/widgets/ManOnTop.dart';
 import 'package:mobiletemplate/widgets/theme.dart';
-
 class Page1 extends StatelessWidget {
   const Page1({Key? key}) : super(key: key);
+
+  void _onWomenOnTopTapped(BuildContext context) {
+    // Exemple de navigation, remplacez par votre logique de navigation
+    Navigator.of(context).push(
+      MaterialPageRoute(builder: (context) => const PageWomenOnTop()),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +30,7 @@ class Page1 extends StatelessWidget {
             centerTitle: false,
             actions: [
               CircleAvatar(
-                backgroundColor: Colors.transparent,
+                backgroundColor: Colors.transparent,  
                 child: Icon(
                   Icons.person,
                   size: 30,
@@ -48,33 +54,33 @@ class Page1 extends StatelessWidget {
                     itemCount: 2,
                   ),
                 ),
-                const Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    WomenOnTopCard(),
-                    Manontop(),
+                    WomenOnTopCard(onTap: () => _onWomenOnTopTapped(context)),
+                    const Manontop(),
                   ],
                 ),
                 const Padding(padding: EdgeInsets.all(20)),
-                const Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    WomenOnTopCard(),
-                    Manontop(),
+                    WomenOnTopCard(onTap: () => _onWomenOnTopTapped(context)),
+                    const Manontop(),
                   ],
                 ),
-                const Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    WomenOnTopCard(),
-                    Manontop(),
+                    WomenOnTopCard(onTap: () => _onWomenOnTopTapped(context)),
+                    const Manontop(),
                   ],
                 ),
-                const Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    WomenOnTopCard(),
-                    Manontop(),
+                    WomenOnTopCard(onTap: () => _onWomenOnTopTapped(context)),
+                    const Manontop(),
                   ],
                 ),
               ],
