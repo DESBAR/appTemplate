@@ -31,7 +31,7 @@ class Page3 extends StatelessWidget {
         ),
         child: ListView(
           children: [
-            StackingCard()
+            WomenOnTopCard()
 // Your content here
           ],
         ),

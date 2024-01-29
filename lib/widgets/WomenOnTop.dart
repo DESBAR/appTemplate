@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:mobiletemplate/widgets/bottom_navigation.dart';
 
-
-class StackingCard extends StatelessWidget {
-  const StackingCard({Key? key}) : super(key: key);
+class WomenOnTopCard extends StatelessWidget {
+  const WomenOnTopCard({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,6 @@ class StackingCard extends StatelessWidget {
       child: Container(
         width: 160,
         height: 160,
-         
         decoration: BoxDecoration(
           image: const DecorationImage(
             image: AssetImage('lib/assets/montagne.png'),
@@ -53,14 +52,13 @@ class SousPageWomenOnTop extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-         backgroundColor: const Color(0xFF43AA8B),
+        backgroundColor: const Color(0xFF43AA8B),
         title: const Text('Women on top '),
       ),
-    
       body: const Center(
-        child: Text('Liste de position ou la femme est sur l''hommme '),
+        child: Text('Liste de position ou la femme est sur l' 'hommme '),
       ),
-      
+      bottomNavigationBar: const BottomNavigation(),
     );
   }
 }

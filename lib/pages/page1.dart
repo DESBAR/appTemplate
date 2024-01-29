@@ -4,7 +4,6 @@ import 'package:mobiletemplate/widgets/WomenOnTop.dart';
 import 'package:mobiletemplate/widgets/ManOnTop.dart';
 import 'package:mobiletemplate/widgets/theme.dart';
 
-
 class Page1 extends StatelessWidget {
   const Page1({Key? key}) : super(key: key);
 
@@ -52,7 +51,7 @@ class Page1 extends StatelessWidget {
                 const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    StackingCard(),
+                    WomenOnTopCard(),
                     Manontop(),
                   ],
                 ),
@@ -60,21 +59,21 @@ class Page1 extends StatelessWidget {
                 const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    StackingCard(),
+                    WomenOnTopCard(),
                     Manontop(),
                   ],
                 ),
-                   const Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    StackingCard(),
+                    WomenOnTopCard(),
                     Manontop(),
                   ],
                 ),
-                   const Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    StackingCard(),
+                    WomenOnTopCard(),
                     Manontop(),
                   ],
                 ),
