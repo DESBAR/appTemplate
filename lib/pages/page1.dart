@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:mobiletemplate/widgets/cardInfo.dart';
-import 'package:mobiletemplate/widgets/stackingCard.dart';
+import 'package:mobiletemplate/widgets/WomenOnTop.dart';
 import 'package:mobiletemplate/widgets/ManOnTop.dart';
 import 'package:mobiletemplate/widgets/theme.dart';
+
 
 class Page1 extends StatelessWidget {
   const Page1({Key? key}) : super(key: key);

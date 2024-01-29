@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 class StackingCard extends StatelessWidget {
   const StackingCard({Key? key}) : super(key: key);
 
@@ -10,13 +11,13 @@ class StackingCard extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => const InformationPage(),
+            builder: (context) => const SousPageWomenOnTop(),
           ),
         );
       },
       child: Container(
-        width: 181,
-        height: 174,
+        width: 160,
+        height: 160,
          
         decoration: BoxDecoration(
           image: const DecorationImage(
@@ -24,16 +25,16 @@ class StackingCard extends StatelessWidget {
             fit: BoxFit.cover,
           ),
           color: const Color(0xFFFF6F59),
-          borderRadius: BorderRadius.circular(26),
+          borderRadius: BorderRadius.circular(20),
         ),
         child: const Padding(
           padding: EdgeInsets.all(16.0),
           child: Align(
             alignment: Alignment.topLeft,
             child: Text(
-              'Stacking',
+              'Women on top',
               style: TextStyle(
-                fontSize: 22,
+                fontSize: 24,
                 fontWeight: FontWeight.bold,
                 color: Colors.white,
               ),
@@ -45,19 +46,21 @@ class StackingCard extends StatelessWidget {
   }
 }
 
-class InformationPage extends StatelessWidget {
-  const InformationPage({Key? key}) : super(key: key);
+class SousPageWomenOnTop extends StatelessWidget {
+  const SousPageWomenOnTop({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
          backgroundColor: const Color(0xFF43AA8B),
-        title: const Text('Stacking'),
+        title: const Text('Women on top '),
       ),
+    
       body: const Center(
-        child: Text('Informations sur Stacking'),
+        child: Text('Liste de position ou la femme est sur l''hommme '),
       ),
+      
     );
   }
 }
