@@ -15,8 +15,8 @@ class StackingCard extends StatelessWidget {
         );
       },
       child: Container(
-        width: 181,
-        height: 174,
+        width: 160,
+        height: 160,
          
         decoration: BoxDecoration(
           image: const DecorationImage(
@@ -24,16 +24,16 @@ class StackingCard extends StatelessWidget {
             fit: BoxFit.cover,
           ),
           color: const Color(0xFFFF6F59),
-          borderRadius: BorderRadius.circular(26),
+          borderRadius: BorderRadius.circular(20),
         ),
         child: const Padding(
           padding: EdgeInsets.all(16.0),
           child: Align(
             alignment: Alignment.topLeft,
             child: Text(
-              'Stacking',
+              'Women on top',
               style: TextStyle(
-                fontSize: 22,
+                fontSize: 24,
                 fontWeight: FontWeight.bold,
                 color: Colors.white,
               ),

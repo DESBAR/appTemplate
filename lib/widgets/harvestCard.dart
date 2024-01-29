@@ -6,18 +6,18 @@ class Toharvest extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 181,
-      height: 174,
+      width: 160,
+      height: 160,
       decoration: BoxDecoration(
         color: const Color(0xFFFF6F59),
-        borderRadius: BorderRadius.circular(26),
+        borderRadius: BorderRadius.circular(20),
       ),
       child: const Padding(
         padding: EdgeInsets.all(16.0),
         child: Align(
           alignment: Alignment.topLeft,
           child: Text(
-            'Solde en attente',
+            'Man on top',
             style: TextStyle(
               fontSize: 24,
               fontWeight: FontWeight.bold,
