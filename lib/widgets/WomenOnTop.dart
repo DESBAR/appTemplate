@@ -56,7 +56,7 @@ class SousPageWomenOnTop extends StatelessWidget {
         title: const Text('Women on top '),
       ),
       body: const Center(
-        child: Text('Liste de position ou la femme est sur l' 'hommme '),
+        child: Text('Liste de position où la femme est sur l''hommme '),
       ),
       bottomNavigationBar: const BottomNavigation(),
     );
