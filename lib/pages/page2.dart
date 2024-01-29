@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mobiletemplate/widgets/theme.dart';
+
 
 class Page2 extends StatelessWidget {
   const Page2({Key? key}) : super(key: key);
@@ -26,7 +28,7 @@ class LogIn extends StatelessWidget {
           width: 428,
           height: 926,
           clipBehavior: Clip.antiAlias,
-          decoration: BoxDecoration(color: Color(0xFFF88A8A)),
+          decoration: const BoxDecoration(color: Color(0xFFF88A8A)),
           child: Stack(
             children: [
               Positioned(
@@ -49,7 +51,7 @@ class LogIn extends StatelessWidget {
                             letterSpacing: 1.38,
                           ),
                         ),
-                        TextSpan(
+                        const TextSpan(
                           text: '2',
                           style: TextStyle(
                             color: Color(0xFF6202EE),
@@ -86,12 +88,12 @@ class LogIn extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 16),
                   clipBehavior: Clip.antiAlias,
                   decoration: ShapeDecoration(
-                    color: Color(0xFF1453F6),
+                    color: const Color(0xFF1453F6),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12),
                     ),
                   ),
-                  child: Row(
+                  child: const Row(
                     mainAxisSize: MainAxisSize.min,
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -140,7 +142,7 @@ class LogIn extends StatelessWidget {
                         top: -3,
                         child: Container(
                           padding: const EdgeInsets.symmetric(horizontal: 8),
-                          decoration: BoxDecoration(color: Colors.white),
+                          decoration: const BoxDecoration(color: Colors.white),
                           child: Row(
                             mainAxisSize: MainAxisSize.min,
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -175,7 +177,7 @@ class LogIn extends StatelessWidget {
                   decoration: ShapeDecoration(
                     color: Colors.white,
                     shape: RoundedRectangleBorder(
-                      side: BorderSide(
+                      side: const BorderSide(
                         width: 1,
                         strokeAlign: BorderSide.strokeAlignCenter,
                         color: Color(0xFFE5E5E5),
@@ -211,8 +213,8 @@ class LogIn extends StatelessWidget {
                           width: 24,
                           height: 24,
                           clipBehavior: Clip.antiAlias,
-                          decoration: BoxDecoration(),
-                          child: Stack(children: [
+                          decoration: const BoxDecoration(),
+                          child: const Stack(children: [
                           
                           ]),
                         ),
@@ -230,7 +232,7 @@ class LogIn extends StatelessWidget {
                   decoration: ShapeDecoration(
                     color: Colors.white.withOpacity(0.7400000095367432),
                     shape: RoundedRectangleBorder(
-                      side: BorderSide(
+                      side: const BorderSide(
                         width: 1,
                         strokeAlign: BorderSide.strokeAlignCenter,
                         color: Color(0xFFE5E5E5),
@@ -265,7 +267,7 @@ class LogIn extends StatelessWidget {
                         child: Container(
                           width: 24,
                           height: 24,
-                          child: Stack(children: [
+                          child: const Stack(children: [
                           
                           ]),
                         ),

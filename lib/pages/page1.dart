@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mobiletemplate/widgets/cardInfo.dart';
 import 'package:mobiletemplate/widgets/stackingCard.dart';
 import 'package:mobiletemplate/widgets/harvestCard.dart';
+import 'package:mobiletemplate/widgets/theme.dart';
 
 class Page1 extends StatelessWidget {
   const Page1({Key? key}) : super(key: key);
@@ -14,7 +15,7 @@ class Page1 extends StatelessWidget {
       CustomScrollView(
         slivers: <Widget>[
           const SliverAppBar(
-            backgroundColor: const Color(0xFF43AA8B),
+             backgroundColor: AppTheme.navbarColor,
             title: Text(
               'Wallet',
               style: TextStyle(
@@ -43,46 +44,26 @@ class Page1 extends StatelessWidget {
                   width: double.infinity,
                   child: ListView.builder(
                     scrollDirection: Axis.horizontal,
-                    itemBuilder: (BuildContext context, int index) => CardInfo(),
+                    itemBuilder: (BuildContext context, int index) => const CardInfo(),
                     itemCount: 2,
                   ),
                 ),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: const [
+                  children: [
                     StackingCard(),
                     Toharvest(),
                   ],
                 ),
-                Padding(padding: EdgeInsets.all(20)),
-                Row(
+                const Padding(padding: EdgeInsets.all(20)),
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: const [
+                  children: [
                     StackingCard(),
                     Toharvest(),
                   ],
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: const [
-                    StackingCard(),
-                    Toharvest(),
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: const [
-                    StackingCard(),
-                    Toharvest(),
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: const [
-                    StackingCard(),
-                    Toharvest(),
-                  ],
-                ),
+               
               ],
             ),
           ),

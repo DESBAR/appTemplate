@@ -1,7 +1,8 @@
 
 import 'package:flutter/material.dart';
-
 import 'package:mobiletemplate/widgets/stackingCard.dart';
+import 'package:mobiletemplate/widgets/theme.dart';
+
 
 class Page3 extends StatelessWidget {
   const Page3({Key? key}) : super(key: key);
@@ -12,7 +13,7 @@ class Page3 extends StatelessWidget {
       backgroundColor: const Color(0xFFF4E9E9), // Couleur de fond de la page
       appBar: AppBar(
         elevation: 0.0,
-        backgroundColor: const Color(0xFF43AA8B),
+           backgroundColor: AppTheme.navbarColor,
         title: const Text(
           'Shop',
           style: TextStyle(

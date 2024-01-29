@@ -17,7 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
           builder: (context) => BottomNavigation(),
         ),
       );
-    });
+    }); 
   }
 
   @override

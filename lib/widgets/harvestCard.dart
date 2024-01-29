@@ -9,11 +9,11 @@ class Toharvest extends StatelessWidget {
       width: 181,
       height: 174,
       decoration: BoxDecoration(
-        color: Color(0xFFFF6F59),
+        color: const Color(0xFFFF6F59),
         borderRadius: BorderRadius.circular(26),
       ),
-      child: Padding(
-        padding: const EdgeInsets.all(16.0),
+      child: const Padding(
+        padding: EdgeInsets.all(16.0),
         child: Align(
           alignment: Alignment.topLeft,
           child: Text(

@@ -10,7 +10,7 @@ class CardInfo extends StatelessWidget {
       width: 380,
       margin: const EdgeInsets.all(10),
       decoration: BoxDecoration(
-        color: Color(0xFF43AA8B),
+        color: const Color(0xFF43AA8B),
         borderRadius: BorderRadius.circular(20),
       ),
       child: Padding(
@@ -24,7 +24,7 @@ class CardInfo extends StatelessWidget {
               children: [
                 Flexible(
                   child: Text(
-                    'Mon compte SOL >',
+                    'Text Random',
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
@@ -32,12 +32,12 @@ class CardInfo extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(width: 10),
+                const SizedBox(width: 10),
         
               ],
             ),
-            SizedBox(height: 20),
-            Text(
+            const SizedBox(height: 20),
+            const Text(
               '15.3134000 SOL',
               style: TextStyle(
                 fontSize: 28,
@@ -45,7 +45,7 @@ class CardInfo extends StatelessWidget {
                 color: Colors.white,
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Text(
               'valeur en USD = 1000\$',
               style: TextStyle(
