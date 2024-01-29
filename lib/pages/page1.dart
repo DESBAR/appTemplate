@@ -11,13 +11,12 @@ class Page1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFFF4E9E9), // Couleur de fond de la page
-      body: 
-      CustomScrollView(
+      body: CustomScrollView(
         slivers: <Widget>[
           const SliverAppBar(
-             backgroundColor: AppTheme.navbarColor,
+            backgroundColor: AppTheme.navbarColor,
             title: Text(
-              'Wallet',
+              'Positions',
               style: TextStyle(
                 color: Colors.black,
               ),
@@ -25,7 +24,7 @@ class Page1 extends StatelessWidget {
             centerTitle: false,
             actions: [
               CircleAvatar(
-                backgroundColor: Colors.transparent, 
+                backgroundColor: Colors.transparent,
                 child: Icon(
                   Icons.person,
                   size: 30,
@@ -44,7 +43,8 @@ class Page1 extends StatelessWidget {
                   width: double.infinity,
                   child: ListView.builder(
                     scrollDirection: Axis.horizontal,
-                    itemBuilder: (BuildContext context, int index) => const CardInfo(),
+                    itemBuilder: (BuildContext context, int index) =>
+                        const CardInfo(),
                     itemCount: 2,
                   ),
                 ),
@@ -63,7 +63,6 @@ class Page1 extends StatelessWidget {
                     Toharvest(),
                   ],
                 ),
-               
               ],
             ),
           ),

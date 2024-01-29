@@ -15,7 +15,12 @@ class BottomNavigation extends StatefulWidget {
 class _BottomNavigationState extends State<BottomNavigation> {
   int _currentIndex = 0;
 
-  final List<Widget> _pages = [    const Page1(),    const Page2(),    const Page3(),    const Page4(),  ];
+  final List<Widget> _pages = [
+    const Page1(),
+    const Page2(),
+    const Page3(),
+    const Page4(),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -25,23 +30,26 @@ class _BottomNavigationState extends State<BottomNavigation> {
         children: _pages,
       ),
       bottomNavigationBar: BottomNavigationBar(
-               backgroundColor: AppTheme.navbarColor,
+        backgroundColor: AppTheme.navbarColor,
         unselectedItemColor: Colors.black,
         selectedItemColor: Colors.white,
         currentIndex: _currentIndex,
         showSelectedLabels: true,
-      
         type: BottomNavigationBarType.fixed,
         onTap: (index) {
           setState(() {
             _currentIndex = index;
           });
         },
-        items: const[
-          BottomNavigationBarItem(icon: Icon(Icons.wallet), label: 'Wallet'),
-          BottomNavigationBarItem(icon: Icon(Icons.handshake), label: 'Space'),
-          BottomNavigationBarItem(icon: Icon(Icons.shopping_cart), label: 'Shop'),
-          BottomNavigationBarItem(icon: Icon(Icons.settings), label: 'Settings'),
+        items: const [
+          BottomNavigationBarItem(
+              icon: Icon(Icons.male_outlined), label: 'Positions'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.handshake), label: 'Favorites'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.shuffle), label: 'Random'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.settings), label: 'Settings'),
         ],
       ),
     );

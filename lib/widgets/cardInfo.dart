@@ -19,7 +19,7 @@ class CardInfo extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Flexible(
@@ -33,7 +33,6 @@ class CardInfo extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(width: 10),
-        
               ],
             ),
             const SizedBox(height: 20),
@@ -49,9 +48,9 @@ class CardInfo extends StatelessWidget {
             Text(
               'valeur en USD = 1000\$',
               style: TextStyle(
-              fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.grey[400],
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
+                color: Colors.grey[400],
               ),
             ),
           ],
