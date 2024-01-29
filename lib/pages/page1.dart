@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mobiletemplate/widgets/cardInfo.dart';
 import 'package:mobiletemplate/widgets/stackingCard.dart';
-import 'package:mobiletemplate/widgets/harvestCard.dart';
+import 'package:mobiletemplate/widgets/ManOnTop.dart';
 import 'package:mobiletemplate/widgets/theme.dart';
 
 class Page1 extends StatelessWidget {
@@ -52,7 +52,7 @@ class Page1 extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     StackingCard(),
-                    Toharvest(),
+                    Manontop(),
                   ],
                 ),
                 const Padding(padding: EdgeInsets.all(20)),
@@ -60,7 +60,21 @@ class Page1 extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     StackingCard(),
-                    Toharvest(),
+                    Manontop(),
+                  ],
+                ),
+                   const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    StackingCard(),
+                    Manontop(),
+                  ],
+                ),
+                   const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    StackingCard(),
+                    Manontop(),
                   ],
                 ),
               ],
