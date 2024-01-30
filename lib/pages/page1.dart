@@ -3,6 +3,7 @@ import 'package:mobiletemplate/widgets/cardInfo.dart';
 import 'package:mobiletemplate/widgets/WomenOnTop.dart';
 import 'package:mobiletemplate/widgets/ManOnTop.dart';
 import 'package:mobiletemplate/widgets/theme.dart';
+
 class Page1 extends StatelessWidget {
   const Page1({Key? key}) : super(key: key);
 
@@ -42,48 +43,43 @@ class Page1 extends StatelessWidget {
             snap: true,
           ),
           SliverToBoxAdapter(
-            child: Column(
-              children: [
-                SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.2,
-                  width: double.infinity,
-                  child: ListView.builder(
-                    scrollDirection: Axis.horizontal,
-                    itemBuilder: (BuildContext context, int index) =>
-                        const CardInfo(),
-                    itemCount: 2,
+            child: Padding(
+              padding: const EdgeInsets.only(top: 20), // Espace après l'AppBar
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      WomenOnTopCard(onTap: () => _onWomenOnTopTapped(context)),
+                      ManOnTopCard(onTap: () => _onWomenOnTopTapped(context)),
+                    ],
                   ),
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    WomenOnTopCard(onTap: () => _onWomenOnTopTapped(context)),
-                    const Manontop(),
-                  ],
-                ),
-                const Padding(padding: EdgeInsets.all(20)),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    WomenOnTopCard(onTap: () => _onWomenOnTopTapped(context)),
-                    const Manontop(),
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    WomenOnTopCard(onTap: () => _onWomenOnTopTapped(context)),
-                    const Manontop(),
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    WomenOnTopCard(onTap: () => _onWomenOnTopTapped(context)),
-                    const Manontop(),
-                  ],
-                ),
-              ],
+                  const SizedBox(height: 20), // Espace entre les lignes
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      WomenOnTopCard(onTap: () => _onWomenOnTopTapped(context)),
+                      ManOnTopCard(onTap: () => _onWomenOnTopTapped(context)),
+                    ],
+                  ),
+                  const SizedBox(height: 20), // Répétez pour chaque espace entre les lignes
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      WomenOnTopCard(onTap: () => _onWomenOnTopTapped(context)),
+                      ManOnTopCard(onTap: () => _onWomenOnTopTapped(context)),
+                    ],
+                  ),
+                  const SizedBox(height: 20),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      WomenOnTopCard(onTap: () => _onWomenOnTopTapped(context)),
+                      ManOnTopCard(onTap: () => _onWomenOnTopTapped(context)),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
         ],

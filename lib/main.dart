@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mobiletemplate/widgets/splash_screen.dart';
 import 'package:mobiletemplate/widgets/bottom_navigation.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatefulWidget {

@@ -10,8 +10,8 @@ class WomenOnTopCard extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Container(
-        width: 160,
-        height: 160,
+        width: 220,
+        height: 220,
         decoration: BoxDecoration(
           image: const DecorationImage(
             image: AssetImage('lib/assets/montagne.png'),

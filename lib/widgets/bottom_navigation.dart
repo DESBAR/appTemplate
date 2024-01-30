@@ -3,7 +3,6 @@ import 'package:mobiletemplate/pages/page1.dart';
 import 'package:mobiletemplate/pages/page2.dart';
 import 'package:mobiletemplate/pages/page3.dart';
 import 'package:mobiletemplate/pages/page4.dart';
-
 import 'package:mobiletemplate/widgets/theme.dart';
 
 class MainScreen extends StatelessWidget {
