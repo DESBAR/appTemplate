@@ -3,11 +3,9 @@ import 'package:mobiletemplate/pages/page1.dart';
 import 'package:mobiletemplate/pages/page2.dart';
 import 'package:mobiletemplate/pages/page3.dart';
 import 'package:mobiletemplate/pages/page4.dart';
-import 'package:mobiletemplate/widgets/WomenOnTop.dart';
+
 import 'package:mobiletemplate/widgets/theme.dart';
 
-
-//route
 class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -23,39 +21,61 @@ class BottomNavigation extends StatefulWidget {
   @override
   _BottomNavigationState createState() => _BottomNavigationState();
 }
+
 class _BottomNavigationState extends State<BottomNavigation> {
   int _currentIndex = 0;
-  late final List<Widget> _pages;
 
-  _BottomNavigationState() {
-    _pages = [
-      const Page1(),
-      const Page2(),
-      const Page3(),
-      const Page4(),
-      WomenOnTopCard(onTap: _onWomenOnTopTapped),
-    ];
-  }
-
-  void _onWomenOnTopTapped() {
-    // Ici, vous pouvez gérer la navigation ou l'action spécifique
-    // pour la page WomenOnTop.
-    // Par exemple, naviguer vers une nouvelle page:
-    // Navigator.of(context).push(MaterialPageRoute(builder: (context) => PageWomenOnTop()));
-  }
+  // Création d'une clé pour chaque Navigator
+  final List<GlobalKey<NavigatorState>> _navigatorKeys = [
+    GlobalKey<NavigatorState>(),
+    GlobalKey<NavigatorState>(),
+    GlobalKey<NavigatorState>(),
+    GlobalKey<NavigatorState>(),
+  ];
 
   void _onItemTapped(int index) {
-    setState(() {
-      _currentIndex = index;
-    });
+    if (index == _currentIndex) {
+      // Pop to first route if user taps the same tab
+      _navigatorKeys[index].currentState?.popUntil((route) => route.isFirst);
+    } else {
+      setState(() {
+        _currentIndex = index;
+      });
+    }
+  }
+
+  Widget _buildOffstageNavigator(int index) {
+    return Offstage(
+      offstage: _currentIndex != index,
+      child: Navigator(
+        key: _navigatorKeys[index],
+        onGenerateRoute: (routeSettings) {
+          return MaterialPageRoute(
+            builder: (context) {
+              switch (index) {
+                case 0:
+                  return const Page1();
+                case 1:
+                  return const Page2();
+                case 2:
+                  return const Page3();
+                case 3:
+                  return const Page4();
+                default:
+                  return const Page1();
+              }
+            },
+          );
+        },
+      ),
+    );
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: IndexedStack(
-        index: _currentIndex,
-        children: _pages,
+      body: Stack(
+        children: List.generate(4, (index) => _buildOffstageNavigator(index)),
       ),
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: AppTheme.navbarColor,
